@@ -211,6 +211,13 @@ Make structs (objects) which have functions
 go run oop.go
 ```
 
+Dependency injection for easier testing
+
+```Shell
+cd beginner/di
+go test
+```
+
 ### Advanced
 
 Benchmarking example (using JSON marshal and unmarshal for the sample)
@@ -360,8 +367,8 @@ go run suicide.go
 Calculate π with go (leibniz, euler and prime are running until you stop it via CTRL+C)
 
 ```Shell
-go Shellrun pi2go.go leibniz
-go Shellrun pi2go.go euler
+go run pi2go.go leibniz
+go run pi2go.go euler
 go run pi2go.go prime
 ```
 
@@ -404,7 +411,7 @@ go run cookies.go
 Demonstrate the power of multithreading / parallel computing
 you have to set GOMAXPROCS to something greater than 1 to see any effect
 
-```
+```Shell
 export GOMAXPROCS=8
 time go run parallel.go true
 time go run parallel.go false
@@ -412,7 +419,7 @@ time go run parallel.go false
 
 A dynamic amount of channels
 
-```Shell
+```go
 time go run dynparallel.go 8
 ```
 
@@ -432,7 +439,7 @@ go run image.go
 Sql (sqlite) golang example
 
 ```Shell
-go Shellrun sqlite.go insert test
+go run sqlite.go insert test
 go run sqlite.go select
 ```
 
